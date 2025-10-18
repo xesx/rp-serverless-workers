@@ -1,0 +1,10 @@
+# start from a clean base image (replace <version> with the desired release)
+FROM runpod/worker-comfyui:5.1.0-base
+
+# install custom nodes using comfy-cli
+RUN comfy-node-install rgthree-comfy
+
+# download models using comfy-cli
+# the "--filename" is what you use in your ComfyUI workflow
+# comfy model download --url <URL> ?[--relative-path <PATH>] ?[--set-civitai-api-token <TOKEN>] ?[--set-hf-api-token <TOKEN>]
+RUN comfy model download --url "https://civitai.com/models/1494558?modelVersionId=2200584" --relative-path models/checkpoints --filename arthemyComics_v60.safetensors
