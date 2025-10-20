@@ -7,4 +7,4 @@ RUN comfy-node-install rgthree-comfy
 # download models using comfy-cli
 # the "--filename" is what you use in your ComfyUI workflow
 # comfy model download --url <URL> ?[--relative-path <PATH>] ?[--set-civitai-api-token <TOKEN>] ?[--set-hf-api-token <TOKEN>]
-RUN comfy model download --url "https://civitai.com/models/1494558?modelVersionId=2200584" --relative-path models/checkpoints --filename arthemyComics_v60.safetensors
+RUN comfy model download --url https://huggingface.co/poor7/Models/resolve/main/juggernaut_reborn.safetensors --relative-path models/checkpoints --filename arthemyComics_v60.safetensors
